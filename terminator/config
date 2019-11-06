@@ -1,0 +1,38 @@
+[global_config]
+  borderless = True
+  broadcast_default = off
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  suppress_multiple_term_dialog = True
+  tab_position = hidden
+  title_font = DejaVu Sans Mono 9
+  title_use_system_font = False
+  window_state = hidden
+[keybindings]
+  broadcast_all = None
+  edit_tab_title = None
+  hide_window = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = None
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.9
+    background_type = transparent
+    font = Cascadia Code 17
+    icon_bell = False
+    palette = "#282a2e:#5a6c56:#8c9440:#73908b:#789073:#85678f:#5e8d87:#9297bf:#373b41:#907378:#b5bd68:#f0c674:#789073:#b294bb:#8abeb7:#b0b287"
+    foreground_color = "#f0d48b"
+    background_color = "#000000"
+    cursor_color = "#f0d48b"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
