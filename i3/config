@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font fira code 8
+font pango:Cascadia Code Mono Regular 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -94,12 +94,12 @@ bindsym $mod+q focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -159,6 +159,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+p exec phpstorm 
+bindsym $mod+i exec intellij-idea-educational
+bindsym $mod+Shift+i exec code
+bindsym $mod+Ctrl+f exec firefox
+bindsym $mod+Ctrl+Shift+q exec poweroff
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -189,18 +195,32 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-bindsym $mod+x exec "lock_and_blur.sh"
+bar {
+	position top
+	mode dock
+  strip_workspace_numbers yes
+	status_command i3status
+  font pango:M+ 1m, FontAwesome, Ionicons, 10
+  colors {
+    background $background
+    statusline $foreground
+    focused_workspace $background $color4 $foreground
+    inactive_workspace $background $background $foreground
+  }
+}
+
+bindsym $mod+x exec ".config/i3/lock_blur.sh"
 
 # Colors set from ~/.Xresources
 set_from_resource	$background	background
 set_from_resource	$foreground	foreground
 set_from_resource	$color0		color0
-set_from_resource 	$color1 	color1
-set_from_resource 	$color2 	color2
-set_from_resource 	$color3 	color3
-set_from_resource 	$color4 	color4
-set_from_resource 	$color5 	color5
-set_from_resource 	$color6		color6
+set_from_resource	$color1 	color1
+set_from_resource	$color2 	color2
+set_from_resource	$color3 	color3
+set_from_resource	$color4 	color4
+set_from_resource	$color5 	color5
+set_from_resource	$color6		color6
 set_from_resource	$color7		color7
 set_from_resource	$color8		color8
 set_from_resource	$color9		color9
@@ -209,35 +229,37 @@ set_from_resource	$color11	color11
 set_from_resource	$color12	color12
 set_from_resource	$color13	color13
 set_from_resource	$color14	color14
-set_from_resource $color15 color15
+set_from_resource $color15  color15
+set_from_resource $cursor   cursorColor
+
+
+client.focused         	$foreground $background $foreground $color2 $color2	
+client.unfocused       	$foreground $background $foreground $color4 $color4
+client.focused_inactive	$foreground $background $foreground $color4 $color4
+client.urgent		$foreground $background $foreground $color4 $color4
+client.placeholder 	$foreground $background $foreground $color4 $color4
 
 client.background	$background
 
-client.focused         	$foreground	$background	$foreground	$color2		$color2	
-client.unfocused       	$foreground	$background	$foreground	$color4		$color4
-client.focused_inactive	$foreground	$background	$foreground	$color4		$color4
-client.urgent		$foreground	$background	$foreground	$color4		$color4
-client.placeholder $foreground $background $foreground $color4 $color4
-
-
-default_border normal
+default_border pixel 3
 title_align center
+popup_during_fullscreen smart
 
-exec_always --no-startup-id "killall polybar;polybar -r main_bar"
 exec_always "setxkbmap -layout us"
+exec_always "nitrogen --restore"
 
 set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
 bindsym $mod+n mode $displayMode
 mode $displayMode {
-    bindsym w exec "\
-                sh /home/yoan/.screenlayout/fw_conf.sh && \              
+    bindsym k exec "\
+                sh /home/yoan/.screenlayout/klax_conf.sh && \              
                 setxkbmap -layout us"; \
                 mode "default"
-    bindsym h exec "\
+    bindsym d exec "\
                 sh /home/yoan/.screenlayout/laptop.sh && \              
                 setxkbmap -layout fr"; \
                 mode "default"
-    bindsym d exec "\
+    bindsym h exec "\
                 sh /home/yoan/.screenlayout/home_desk.sh && \              
                 setxkbmap -layout fr"; \
                 mode "default"
