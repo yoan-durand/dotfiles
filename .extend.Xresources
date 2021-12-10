@@ -1,76 +1,76 @@
-*background:            #272827
-*foreground:            #657b83
+*background:            #1f1726
+*foreground:            #dafaff
 *fading:                15
 *fadeColor:             black
-*cursorColor:           #16A085
+*cursorColor:           #dd00ff
 *pointerColorBackground:#2B2C2B
 *pointerColorForeground:#16A085
 
 !! black dark/light
-!!*color0:                #282928
-!!*color8:                #272827
+!!*color0:                #000507
+!!*color8:                #d94085
 
 !! red dark/light
-!!*color1:                #983133
-!!*color9:                #985F31
+!!*color1:                #2ab250
+!!*color9:                #ffd16f
 
 !! green dark/light
-!!*color2:                #1D584D
-!!*color10:               #16A085
+!!*color2:                #883cdc
+!!*color10:               #ececec
 
 !! yellow dark/light
-!!*color3:                #5CE022
-!!*color11:               #63B93D
+!!*color3:                #c1b8b7
+!!*color11:               #fff8de
 
 !! blue dark/light
-!!*color4:                #001B33
-!!*color12:               #839496
+!!*color4:                #009cc9
+!!*color12:               #da6bac
 
 !! cyan dark/light
-!!*color6:                #4F6A98
-!!*color14:               #2269E0
+!!*color6:                #f4dca5
+!!*color14:               #eac066
 
 !! white dark/light
-!!*color7:                #fdf6e3
-!!*color15:               #fdf6e3
+!!*color7:                #308cba
+!!*color15:               #ae636b
 
 ! black
-*.color0:       #282a2e
-*.color8:       #373b41
+*.color0:       #000507
+*.color8:       #009cc9
 
 ! red
-*.color1:       #5a6c56
-*.color9:       #907378
+*.color1:       #d94085
+*.color9:       #da6bac
 
 ! green
-*.color2:       #8c9440
-*.color10:      #b5bd68
+*.color2:       #2ab250
+*.color10:      #f4dca5
 
 ! yellow
-*.color3:       #73908b
-*.color11:      #f0c674
+*.color3:       #ffd16f
+*.color11:      #eac066
 
 ! blue
-*.color4:       #789073
-*.color12:      #789073
+*.color4:       #883cdc
+*.color12:      #308cba
 
 ! magenta
-*.color5:       #85678f
-*.color13:      #b294bb
+*.color5:       #ececec
+*.color13:      #ae636b
 
 ! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
+*.color6:       #c1b8b7
+*.color14:      #ff919d
 
 ! white
-*.color7:       #9297bf
-*.color15:      #b0b287
+*.color7:       #fff8de
+*.color15:      #e4838d
 
 Xcursor.theme: Breeze
 Xcursor.size:  0
 
-XTerm*background: #272827
-XTerm*foreground: #fdf6e3
+XTerm*background: #1f1726
+XTerm*foreground: #dafaff
 XTerm*reverseVideo: on
 !!XTerm*faceName: Terminus:size=11:antialias=true
 XTerm*faceName: InconsolataRegular:size=11:antialias=true
@@ -84,7 +84,7 @@ URxvt*mouseWheelScrollPage:           false
 URxvt*cursorBlink:                    true
 URxvt*background:                     black
 URxvt*foreground:                     #f0d48b
-URxvt*cursorColor:		      #f0d48b
+URxvt*cursorColor:		      #dd00ff
 URxvt*saveLines:                      5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
