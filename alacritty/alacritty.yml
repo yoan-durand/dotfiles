@@ -1,0 +1,47 @@
+ # Configuration for Alacritty, the GPU enhanced terminal emulator.
+   2   │ 
+   3   │ # Import additional configuration files
+   4   │ #
+   5   │ # Imports are loaded in order, skipping all missing files, with the importing
+   6   │ # file being loaded last. If a field is already present in a previous import, it
+   7   │ # will be replaced.
+   8   │ #
+   9   │ # All imports must either be absolute paths starting with `/`, or paths relative
+  10   │ # to the user's home directory starting with `~/`.
+  11   │ #import:
+  12   │ #  - /path/to/alacritty.yml
+  13   │ 
+  14   │ # Any items in the `env` entry below will be added as
+  15   │ # environment variables. Some entries may override variables
+  16   │ # set by alacritty itself.
+  17   │ #env:
+  18   │   # TERM variable
+  19   │   #
+  20   │   # This value is used to set the `$TERM` environment variable for
+  21   │   # each instance of Alacritty. If it is not present, alacritty will
+  22   │   # check the local terminfo database and use `alacritty` if it is
+  23   │   # available, otherwise `xterm-256color` is used.
+  24   │   #TERM: alacritty
+window:
+  27   │   # Window dimensions (changes require restart)
+  28   │   #
+  29   │   # Number of lines/columns (not pixels) in the terminal. The number of columns
+  30   │   # must be at least `2`, while using a value of `0` for columns and lines will
+  31   │   # fall back to the window manager's recommended size.
+  32   │   #dimensions:
+  33   │   #  columns: 0
+  34   │   #  lines: 0
+  35   │ 
+  36   │   # Window position (changes require restart)
+  37   │   #
+  38   │   # Specified in number of pixels.
+  39   │   # If the position is not set, the window manager will handle the placement.
+  40   │   #position:
+  41   │   #  x: 0
+  42   │   #  y: 0
+  43   │ 
+  44   │   # Window padding (changes require restart)
+  45   │   #
+  46   │   # Blank space added around the window in pixels. This padding is scaled
+  47   │   # by DPI and the specified value is always added at both opposing sides.
+  48   │   #padding:
