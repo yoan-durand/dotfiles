@@ -5,7 +5,7 @@
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-Z
+
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
@@ -17,7 +17,7 @@ theme.bg_normal     = "#1f1726"
 theme.bg_focus      = "#883cdc"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
+theme.bg_systray    = theme.bg_normalR
 
 theme.fg_normal     = "#dafaff"
 theme.fg_focus      = "#dafaff"
