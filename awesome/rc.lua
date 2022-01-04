@@ -8,7 +8,7 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
-local vicious = require("vicious")
+--local vicious = require("vicious")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -52,7 +52,7 @@ end
 beautiful.init(gears.filesystem.get_configuration_dir() .. "myTheme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "terminator"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -219,35 +219,35 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
-    batwidget = wibox.widget.progressbar()
-    batwidget:set_width(30);
+ --   batwidget = wibox.widget.progressbar()
+ --   batwidget:set_width(30);
     -- Create wibox with batwidget
-    batbox = wibox.layout.margin(
-        wibox.widget{ 
-                        {
-                            max_value = 1, 
-                            widget = batwidget,
-                            border_width = 0.5, 
-                            border_color = "#000000",
-                            color = { 
-                                        type = "linear",
-                                        from = { 0, 0 },
-                                        to = { 0, 30 },
-                                        stops = { 
-                                            { 0, "#AECF96" },
-                                            { 1, "#AECF96" } 
-                                        } 
-                                    } 
-                        },
-                      forced_height = 20, 
-                      forced_width = 50,
-                      color = beautiful.fg_widget,
-                      layout = wibox.layout.stack 
-                    },
-        1, 1, 3, 3)
+   -- batbox = wibox.layout.margin(
+     --   wibox.widget{ 
+       --                 {
+         --                   max_value = 1, 
+           --                 widget = batwidget,
+             --               border_width = 0.5, 
+               --             border_color = "#000000",
+                 --           color = { 
+                   --                     type = "linear",
+                     --                   from = { 0, 0 },
+                       --                 to = { 0, 30 },
+                         --               stops = { 
+                           --                 { 0, "#AECF96" },
+                             --               { 1, "#AECF96" } 
+                               --         } 
+                                 --   } 
+  --                      },
+  --                    forced_height = 20, 
+   --                   forced_width = 50,
+    --                  color = beautiful.fg_widget,
+     --                 layout = wibox.layout.stack 
+      --              },
+       -- 1, 1, 3, 3)
     
     -- Register battery widget
-    vicious.register(batwidget, vicious.widgets.bat, "$2", 120, "BAT0")
+  --  vicious.register(batwidget, vicious.widgets.bat, "$2", 120, "BAT0")
 -- {{{ Battery state
 -- Initialize widget
 -- batwidget = awful.widget.progressbar()
@@ -263,20 +263,20 @@ awful.screen.connect_for_each_screen(function(s)
 -- vicious.register(batwidget, vicious.widgets.bat, "$2", 60, "BAT0")
 
 
-    cpuwidget = awful.widget.graph()
-    cpuwidget:set_width(50)
-    cpuwidget:set_background_color"#494B4F"
-    cpuwidget:set_color{ 
-                            type = "linear", 
-                            from = { 0, 0 }, 
-                            to = { 50, 0 },
-                            stops = { 
-                                { 0, "#FF5656" },
-                                { 0.5, "#88A175" },
-                                { 1, "#AECF96" } 
-                            } 
-                        }
-    vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
+    --cpuwidget = awful.widget.graph()
+   -- cpuwidget:set_width(50)
+   -- cpuwidget:set_background_color"#494B4F"
+   -- cpuwidget:set_color{ 
+   --                         type = "linear", 
+   --                         from = { 0, 0 }, 
+   --                         to = { 50, 0 },
+    --                        stops = { 
+     --                           { 0, "#FF5656" },
+      --                          { 0.5, "#88A175" },
+      --                          { 1, "#AECF96" } 
+       --                     } 
+        --                }
+   -- vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -290,8 +290,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            batbox,
-            cpuwidget,
+     --       batbox,
+     --       cpuwidget,
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
@@ -507,7 +507,11 @@ clientkeys = gears.table.join(
                     c:raise()
                 end,
                 { description = "(un)maximize horizontally", group = "client" }),
-        awful.key({modkey}, "x", function() awful.spawn.with_shell("sh ~/.config/i3/lock_blur.sh")  end)
+        awful.key({ modkey, }, "x", 
+                function() 
+                    awful.spawn("arcolinux-logout")  
+                end,
+                { description= "Affiche le menu de sortie", group = "launcher" })
 )
 
 -- Bind all key numbers to tags.
@@ -707,4 +711,4 @@ end)
 
 awful.spawn.with_shell("setxkbmap -layout us")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("compton")
+awful.spawn.with_shell("picom")
