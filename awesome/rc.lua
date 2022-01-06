@@ -16,6 +16,9 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -219,64 +222,6 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
- --   batwidget = wibox.widget.progressbar()
- --   batwidget:set_width(30);
-    -- Create wibox with batwidget
-   -- batbox = wibox.layout.margin(
-     --   wibox.widget{ 
-       --                 {
-         --                   max_value = 1, 
-           --                 widget = batwidget,
-             --               border_width = 0.5, 
-               --             border_color = "#000000",
-                 --           color = { 
-                   --                     type = "linear",
-                     --                   from = { 0, 0 },
-                       --                 to = { 0, 30 },
-                         --               stops = { 
-                           --                 { 0, "#AECF96" },
-                             --               { 1, "#AECF96" } 
-                               --         } 
-                                 --   } 
-  --                      },
-  --                    forced_height = 20, 
-   --                   forced_width = 50,
-    --                  color = beautiful.fg_widget,
-     --                 layout = wibox.layout.stack 
-      --              },
-       -- 1, 1, 3, 3)
-    
-    -- Register battery widget
-  --  vicious.register(batwidget, vicious.widgets.bat, "$2", 120, "BAT0")
--- {{{ Battery state
--- Initialize widget
--- batwidget = awful.widget.progressbar()
--- batwidget:set_width(8)
--- batwidget:set_height(14)
-
--- batwidget:set_background_color("#000000")
--- batwidget:set_border_color(nil)
--- batwidget:set_color("#AECF96")
-
--- -- {{{ Battery state
--- -- Initialize widget
--- vicious.register(batwidget, vicious.widgets.bat, "$2", 60, "BAT0")
-
-
-    --cpuwidget = awful.widget.graph()
-   -- cpuwidget:set_width(50)
-   -- cpuwidget:set_background_color"#494B4F"
-   -- cpuwidget:set_color{ 
-   --                         type = "linear", 
-   --                         from = { 0, 0 }, 
-   --                         to = { 50, 0 },
-    --                        stops = { 
-     --                           { 0, "#FF5656" },
-      --                          { 0.5, "#88A175" },
-      --                          { 1, "#AECF96" } 
-       --                     } 
-        --                }
-   -- vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -290,8 +235,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-     --       batbox,
-     --       cpuwidget,
+            cpu_widget(),
+            ram_widget(),
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,

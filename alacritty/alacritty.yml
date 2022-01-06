@@ -276,9 +276,108 @@ aura: &aura
       magenta: "#888ba5"
       cyan:    "#599caa"
       white:   "#d3ebe9"
-  
-  
-colors: *aura
+  panda: &panda
+    primary:
+      background: "#1D1E20"
+      foreground: "#F0F0F0"
+    cursor:
+      text: CellBackground
+      cursor: "#F0F0F0"
+    normal:
+      black:   "#1F1F20" 
+      red:     "#FB055A" 
+      green:   "#26FFD4" 
+      yellow:  "#FDAA5A" 
+      blue:    "#5C9FFF" 
+      magenta: "#FC59A6" 
+      cyan:    "#26FFD4" 
+      white:   "#F0F0F0" 
+    bright:
+      black:   "#5C6370"
+      red:     "#FB055A"
+      green:   "#26FFD4"
+      yellow:  "#FEBE7E"
+      blue:    "#55ADFF"
+      magenta: "#FD95D0"
+      cyan:    "#26FFD4"
+      white:   "#F0F0F0"
+  laserwave: &laserwave
+    primary:
+      background: "#1F1926"
+      foreground: "#E0E0E0"
+    cursor:
+      text: CellBackground
+      cursor: "#E0E0E0"
+    normal:
+      black:   "#39243A" 
+      red:     "#EB64B9" 
+      green:   "#AFD686" 
+      yellow:  "#FEAE87" 
+      blue:    "#40B4C4" 
+      magenta: "#B381C5" 
+      cyan:    "#215969" 
+      white:   "#91889b" 
+    bright:
+      black:   "#716485"
+      red:     "#FC2377"
+      green:   "#50FA7B"
+      yellow:  "#FFE261"
+      blue:    "#74DFC4"
+      magenta: "#6D75E0"
+      cyan:    "#B4DCE7"
+      white:   "#FFFFFF"  
+  grape: &grape
+    primary:
+      background: "#171423"
+      foreground: "#9f9fa1"
+    cursor:
+      text: CellBackground
+      cursor: "#9f9fa1"
+    normal:
+      black:   "#2d283f" 
+      red:     "#ed2261" 
+      green:   "#1fa91b" 
+      yellow:  "#8ddc20" 
+      blue:    "#487df4" 
+      magenta: "#8d35c9" 
+      cyan:    "#3bdeed" 
+      white:   "#9e9ea0" 
+    bright:
+      black:   "#59516a"
+      red:     "#f0729a"
+      green:   "#53aa5e"
+      yellow:  "#b2dc87"
+      blue:    "#a9bcec"
+      magenta: "#ad81c2"
+      cyan:    "#9de3eb"
+      white:   "#a288f7"
+  flatland: &flatland
+    primary:
+      background: "#1d1f21"
+      foreground: "#b8dbef"
+    cursor:
+      text: CellBackground
+      cursor: "#b8dbef"
+    normal:
+      black:   "#1d1d19" 
+      red:     "#f18339" 
+      green:   "#9fd364" 
+      yellow:  "#f4ef6d" 
+      blue:    "#5096be" 
+      magenta: "#695abc" 
+      cyan:    "#d63865" 
+      white:   "#ffffff" 
+    bright:
+      black:   "#1d1d19"
+      red:     "#d22a24"
+      green:   "#a7d42c"
+      yellow:  "#ff8949"
+      blue:    "#61b9d0"
+      magenta: "#695abc"
+      cyan:    "#d63865"
+      white:   "#ffffff"
+
+colors: *panda
 
   # Default colors
   #primary:
