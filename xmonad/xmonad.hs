@@ -8,6 +8,8 @@
 --
 
 import XMonad
+import XMonad.Config.Azerty
+import XMonad.Hooks.SetWMName
 import Data.Monoid
 import System.Exit
 
@@ -138,7 +140,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-[1..9], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        -- | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_minus, xK_egrave, xK_underscore, xK_ccedilla]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
 
@@ -250,7 +253,7 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad & def {startupHook = setWMName "LG3D"} 
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
