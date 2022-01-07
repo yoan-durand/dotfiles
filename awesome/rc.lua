@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -235,6 +237,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            batteryarc_widget(),
             cpu_widget(),
             ram_widget(),
             mykeyboardlayout,
@@ -655,5 +658,5 @@ end)
 -- }}}
 
 awful.spawn.with_shell("setxkbmap -layout us")
-awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("nitrogen --restore &")
+awful.spawn.with_shell("picom &")
