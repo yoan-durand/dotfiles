@@ -187,7 +187,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "", "", "", "", "", "", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "", "", "", "", "", "", "", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -329,6 +329,18 @@ globalkeys = gears.table.join(
             awful.spawn("firefox")
         end,
                 { description = "open firefox", group = "launcher" }),
+        awful.key({ modkey, }, "c", function()
+            awful.spawn("skypeforlinux")
+        end,
+                { description = "open Skype", group = "launcher" }),
+        awful.key({ modkey, }, "v", function()
+            awful.spawn("buttercup")
+        end,
+                { description = "open Buttercup", group = "launcher" }),
+        awful.key({ modkey,}, "e", function()
+            awful.spawn("mailspring")
+        end,
+                { description = "open Mailspring", group = "launcher" }),
         awful.key({ modkey, "Control" }, "r", awesome.restart,
                 { description = "reload awesome", group = "awesome" }),
         awful.key({ modkey, "Shift", "Control" }, "q", awesome.quit,
@@ -657,6 +669,7 @@ client.connect_signal("unfocus", function(c)
 end)
 -- }}}
 
+awful.spawn.with_shell("./home/yoan/.screenlayout/home_desk.sh")
 awful.spawn.with_shell("setxkbmap -layout us")
 awful.spawn.with_shell("nitrogen --restore &")
 awful.spawn.with_shell("picom &")
