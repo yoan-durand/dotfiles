@@ -325,6 +325,10 @@ globalkeys = gears.table.join(
             awful.spawn("phpstorm")
         end,
                 { description = "open phpstorm", group = "launcher" }),
+        awful.key({ modkey, }, "i", function()
+            awful.spawn("codium")
+        end,
+                { description = "open codium", group = "launcher" }),
         awful.key({ modkey, }, "b", function()
             awful.spawn("firefox")
         end,
