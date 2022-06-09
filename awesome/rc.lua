@@ -334,9 +334,9 @@ globalkeys = gears.table.join(
         end,
                 { description = "open firefox", group = "launcher" }),
         awful.key({ modkey, }, "c", function()
-            awful.spawn("skypeforlinux")
+            awful.spawn("zulip")
         end,
-                { description = "open Skype", group = "launcher" }),
+                { description = "open Zulip", group = "launcher" }),
         awful.key({ modkey, }, "v", function()
             awful.spawn("buttercup")
         end,
