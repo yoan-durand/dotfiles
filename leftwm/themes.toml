@@ -1,6 +1,7 @@
 [[repos]]
 url = "https://raw.githubusercontent.com/leftwm/leftwm-community-themes/master/known.toml"
 name = "community"
+definitions_version = 0
 
 [[repos.themes]]
 name = "Orange Forest"
@@ -25,7 +26,7 @@ repository = "https://github.com/b4skyx/leftwm-soothe/"
 commit = "*"
 version = "0.0.1"
 leftwm_versions = "*"
-current = true
+current = false
 relative_directory = "theme/"
 
 [[repos.themes]]
@@ -55,11 +56,12 @@ current = false
 
 [[repos.themes]]
 name = "Forest"
+directory = "/home/yoan/.config/leftwm/themes/Forest"
 repository = "https://github.com/lex148/forest/"
 commit = "*"
 version = "0.0.1"
 leftwm_versions = "*"
-current = false
+current = true
 
 [[repos.themes]]
 name = "Ground Zero"
@@ -103,6 +105,7 @@ current = false
 
 [[repos.themes]]
 name = "Sunset"
+directory = "/home/yoan/.config/leftwm/themes/Sunset"
 repository = "https://github.com/Syudagye/leftwm-sunset"
 commit = "*"
 version = "0.0.1"
@@ -119,6 +122,7 @@ current = false
 
 [[repos.themes]]
 name = "Epitaph"
+directory = "/home/yoan/.config/leftwm/themes/Epitaph"
 repository = "https://github.com/VentGrey/Epitaph"
 commit = "*"
 version = "0.0.1"
@@ -152,4 +156,5 @@ current = false
 [[repos]]
 url = "localhost"
 name = "LOCAL"
+definitions_version = 0
 themes = []

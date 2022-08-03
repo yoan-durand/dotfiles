@@ -46,9 +46,27 @@ modifier = ["modkey"]
 key = "v"
 
 [[keybind]]
+command = "Execute"
+value = "zulip"
+modifier = ["modkey"]
+key = "c"
+
+[[keybind]]
+command = "Execute"
+value = "codium"
+modifier = ["modkey", "Shift"]
+key = "c"
+
+[[keybind]]
 command = "CloseWindow"
 modifier = ["modkey", "Shift"]
 key = "q"
+
+[[keybind]]
+command = "Execute"
+value = "mailspring"
+modifier = ["modkey"]
+key = "e"
 
 [[keybind]]
 command = "SoftReload"
