@@ -41,6 +41,24 @@ key = "p"
 
 [[keybind]]
 command = "Execute"
+value = "intellij-idea-ultimate-edition"
+modifier = ["modkey"]
+key = "o"
+
+[[keybind]]
+command = "Execute"
+value = "fleet"
+modifier = ["modkey"]
+key = "f"
+
+[[keybind]]
+command = "Execute"
+value = "insomnia-designer"
+modifier = ["modkey"]
+key = "i"
+
+[[keybind]]
+command = "Execute"
 value = "buttercup"
 modifier = ["modkey"]
 key = "v"
@@ -64,7 +82,7 @@ key = "q"
 
 [[keybind]]
 command = "Execute"
-value = "mailspring"
+value = "bluemail"
 modifier = ["modkey"]
 key = "e"
 
