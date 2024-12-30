@@ -117,7 +117,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR='vim'
 export VISUAL='vim'
-
+export GOPATH="/home/yoan/go"
 #PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
@@ -127,6 +127,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
+
+export PATH="$GOPATH/bin:$PATH"
 
 #list
 alias ls='exa'
@@ -420,11 +422,11 @@ alias ssh_gitlab='ssh 124659-5492@gate.jpc.infomaniak.com -p 3022'
 alias ssh_runner1='ssh 124660-5492@gate.jpc.infomaniak.com -p 3022'
 alias ssh_runner2='ssh 125965-5492@gate.jpc.infomaniak.com -p 3022'
 
+alias vim='nvim'
+
 eval $(thefuck --alias)
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # reporting tools - install when not installed
 #neofetch
@@ -444,6 +446,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
