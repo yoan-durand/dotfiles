@@ -53,7 +53,7 @@
     keybind: [
         (command: Execute, value: "dmenu_run", modifier: ["modkey", "Shift"], key: "d"),
         (command: Execute, value: "rofi -combi -modi drun -show combi", modifier: ["modkey"], key: "d"),
-        (command: Execute, value: "alacritty", modifier: ["modkey"], key: "Return"),
+        (command: Execute, value: "ghostty", modifier: ["modkey"], key: "Return"),
         (command: Execute, value: "firefox", modifier: ["modkey"], key: "b"),
         (command: Execute, value: "phpstorm", modifier: ["modkey"], key: "p"),
         (command: Execute, value: "intellij-idea-ultimate-edition", modifier: ["modkey"], key: "o"),

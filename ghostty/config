@@ -3,8 +3,10 @@ theme = Snazzy
 font-family = "FiraCode Nerd Font Bold"
 font-size = 16
 background = #0d1926
-background-opacity = 0.75
+background-opacity = 0.80
 window-decoration = false
 
 cursor-style = block
 cursor-opacity = 1
+cursor-color = #B4E1FD 
+cursor-style-blink = false
