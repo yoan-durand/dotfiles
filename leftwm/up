@@ -2,3 +2,4 @@
 
 nitrogen --restore
 setxkbmap us
+sh ~/.screenlayout/home.sh

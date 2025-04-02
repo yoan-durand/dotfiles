@@ -1,0 +1,19 @@
+<code_scheme name="Default" version="173">
+  <PHPCodeStyleSettings>
+    <option name="ALIGN_KEY_VALUE_PAIRS" value="true"/>
+    <option name="ALIGN_PHPDOC_PARAM_NAMES" value="true"/>
+    <option name="ALIGN_ASSIGNMENTS" value="true"/>
+    <option name="KEEP_RPAREN_AND_LBRACE_ON_ONE_LINE" value="true"/>
+    <option name="ALIGN_CLASS_CONSTANTS" value="true"/>
+  </PHPCodeStyleSettings>
+  <codeStyleSettings language="PHP">
+    <option name="SPACE_AFTER_TYPE_CAST" value="true"/>
+    <option name="METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true"/>
+    <option name="METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE" value="true"/>
+  </codeStyleSettings>
+  <codeStyleSettings language="yaml">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="4"/>
+    </indentOptions>
+  </codeStyleSettings>
+</code_scheme>

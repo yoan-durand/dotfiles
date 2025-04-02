@@ -1,10 +1,8 @@
 <scheme name="Lovecraft yoan" version="142" parent_scheme="Default">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2023-10-27T18:34:46</property>
     <property name="ide">PhpStorm</property>
-    <property name="ideVersion">2023.2.3.0.0</property>
-    <property name="modified">2023-10-27T18:35:18</property>
+    <property name="ideVersion">2024.3.5.0.0</property>
     <property name="originalScheme">Lovecraft yoan</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.2" />
@@ -95,6 +93,27 @@
       <value>
         <option name="FOREGROUND" value="bbb529" />
         <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="ASCIIDOC.LISTING_TEXT">
+      <value />
+    </option>
+    <option name="ASCIIDOC_MONO">
+      <value />
+    </option>
+    <option name="ASCIIDOC_MONOBOLD">
+      <value>
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="ASCIIDOC_MONOBOLDITALIC">
+      <value>
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
+    <option name="ASCIIDOC_MONOITALIC">
+      <value>
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="BAD_CHARACTER">
@@ -492,9 +511,7 @@
       </value>
     </option>
     <option name="DEFAULT_STRING">
-      <value>
-        <option name="FOREGROUND" value="ddffc5" />
-      </value>
+      <value />
     </option>
     <option name="DEFAULT_TAG" baseAttributes="TEXT" />
     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR">
@@ -547,6 +564,15 @@
     <option name="DOC_COMMENT_TAG_VALUE">
       <value>
         <option name="FOREGROUND" value="798891" />
+      </value>
+    </option>
+    <option name="DQL_EXPR">
+      <value />
+    </option>
+    <option name="DQL_PLACEHOLDER">
+      <value>
+        <option name="FOREGROUND" value="9af842" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DUPLICATE_FROM_SERVER">
@@ -1099,11 +1125,6 @@
         <option name="FOREGROUND" value="219598" />
       </value>
     </option>
-    <option name="REST.BOLD" baseAttributes="DEFAULT_IDENTIFIER" />
-    <option name="REST.FIXED" baseAttributes="DEFAULT_IDENTIFIER" />
-    <option name="REST.INLINE" baseAttributes="DEFAULT_IDENTIFIER" />
-    <option name="REST.INTERPRETED" baseAttributes="DEFAULT_IDENTIFIER" />
-    <option name="REST.ITALIC" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="RH_RETURN_KEYWORD">
       <value>
         <option name="EFFECT_COLOR" value="93ffa4" />
@@ -1134,6 +1155,9 @@
         <option name="FOREGROUND" value="1f1f23" />
         <option name="BACKGROUND" value="ff41" />
       </value>
+    </option>
+    <option name="SONARLINT_SELECTED">
+      <value />
     </option>
     <option name="SQUARE_BRACKETS_RAINBOW_COLOR0">
       <value>
@@ -1234,6 +1258,9 @@
         <option name="FOREGROUND" value="d1b46d" />
         <option name="FONT_TYPE" value="1" />
       </value>
+    </option>
+    <option name="TS.TYPE_GUARD">
+      <value />
     </option>
     <option name="TWIG_BRACKETS">
       <value>

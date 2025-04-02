@@ -5,7 +5,7 @@
 #installation via script from github
 #export ZSH="/home/$USER/.oh-my-zsh"
 #installation via paru -S oh-my-zsh-git
-export ZSH=/usr/share/oh-my-zsh/
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -388,39 +388,7 @@ alias personal='cp -Rf /personal/* ~'
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
-alias ssh_api_aerofab='ssh 127534-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_aerofab='ssh 127533-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_amodio='ssh 127548-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_amodio='ssh 127547-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_drao='ssh 127514-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_drao='ssh 127513-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_integ='ssh 127731-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_integ='ssh 127729-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_orval='ssh 127688-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_orval='ssh 127687-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_skumenn='ssh 127704-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_skumenn='ssh 127703-5492@gate.jpc.infomaniak.com -p 3022'
-
-
-alias ssh_api_staging='ssh 127491-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_staging='ssh 127490-5492@gate.jpc.infomaniak.com -p 3022'
-
-
-alias ssh_api_pprod='ssh 127743-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_pprod='ssh 127742-5492@gate.jpc.infomaniak.com -p 3022'
-
-alias ssh_api_prod='ssh 127797-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_nec_prod='ssh 127795-5492@gate.jpc.infomaniak.com -p 3022'
-
-
-alias ssh_gitlab='ssh 124659-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_runner1='ssh 124660-5492@gate.jpc.infomaniak.com -p 3022'
-alias ssh_runner2='ssh 125965-5492@gate.jpc.infomaniak.com -p 3022'
+alias task='go-task'
 
 alias vim='nvim'
 
@@ -449,3 +417,6 @@ eval $(thefuck --alias)
 source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
