@@ -1,5 +1,5 @@
 #! /bin/sh
 
-nitrogen --restore
-setxkbmap us
 sh ~/.screenlayout/home.sh
+setxkbmap us
+nitrogen --restore
